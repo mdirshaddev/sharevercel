@@ -1,0 +1,22 @@
+{
+  "recommendations": [
+    "mikestead.dotenv",
+    "miguelsolorio.fluent-icons",
+    "mhutchie.git-graph",
+    "cschleiden.vscode-github-actions",
+    "pkief.material-icon-theme",
+    "mintlify.document",
+    "christian-kohler.path-intellisense",
+    "ms-vscode-remote.remote-containers",
+    "ms-vscode-remote.remote-ssh",
+    "ms-vscode-remote.remote-ssh-edit",
+    "ms-vscode-remote.remote-wsl",
+    "ms-vscode-remote.vscode-remote-extensionpack",
+    "dbaeumer.vscode-eslint",
+    "silvenon.mdx",
+    "johnpapa.vscode-peacock",
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss",
+    "Gruntfuggly.todo-tree"
+  ]
+}

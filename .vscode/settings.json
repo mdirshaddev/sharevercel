@@ -1,0 +1,22 @@
+{
+  // Files
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true
+  },
+  "files.eol": "\n",
+  // Editor
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.formatOnType": true,
+  // Workbench
+  "workbench.colorTheme": "Abyss",
+  "workbench.editor.enablePreview": true,
+  "workbench.editor.wrapTabs": true
+}
