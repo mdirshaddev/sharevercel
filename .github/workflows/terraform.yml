@@ -18,15 +18,18 @@ jobs:
         uses: hashicorp/setup-terraform@v2
         with:
           cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
-          TF_VAR_REACT_APP_SENTRY_DSN: ${{ secrets.REACT_APP_SENTRY_DSN }}
-          TF_VAR_REACT_APP_API_KEY: ${{ secrets.REACT_APP_API_KEY }}
-          TF_VAR_REACT_APP_AUTH_DOMAIN: ${{ secrets.REACT_APP_AUTH_DOMAIN }}
-          TF_VAR_REACT_APP_DATABASE_URL: ${{ secrets.REACT_APP_DATABASE_URL }}
-          TF_VAR_REACT_APP_PROJECT_ID: ${{ secrets.REACT_APP_PROJECT_ID }}
-          TF_VAR_REACT_APP_STORAGE_BUCKET: ${{ secrets.REACT_APP_STORAGE_BUCKET }}
-          TF_VAR_REACT_APP_MESSAGING_SENDER_ID: ${{ secrets.REACT_APP_MESSAGING_SENDER_ID }}
-          TF_VAR_REACT_APP_APP_ID: ${{ secrets.REACT_APP_APP_ID }}
-          TF_VAR_REACT_APP_MEASUREMENT_ID: ${{ secrets.REACT_APP_MEASUREMENT_ID }}
+
+      - name: '🔑 Set Environment Variables'
+        run: |
+          export TF_VAR_REACT_APP_SENTRY_DSN=${{ secrets.REACT_APP_SENTRY_DSN }}
+          export TF_VAR_REACT_APP_API_KEY=${{ secrets.REACT_APP_API_KEY }}
+          export TF_VAR_REACT_APP_AUTH_DOMAIN=${{ secrets.REACT_APP_AUTH_DOMAIN }}
+          export TF_VAR_REACT_APP_DATABASE_URL=${{ secrets.REACT_APP_DATABASE_URL }}
+          export TF_VAR_REACT_APP_PROJECT_ID=${{ secrets.REACT_APP_PROJECT_ID }}
+          export TF_VAR_REACT_APP_STORAGE_BUCKET=${{ secrets.REACT_APP_STORAGE_BUCKET }}
+          export TF_VAR_REACT_APP_MESSAGING_SENDER_ID=${{ secrets.REACT_APP_MESSAGING_SENDER_ID }}
+          export TF_VAR_REACT_APP_APP_ID=${{ secrets.REACT_APP_APP_ID }}
+          export TF_VAR_REACT_APP_MEASUREMENT_ID=${{ secrets.REACT_APP_MEASUREMENT_ID }}
 
       - name: '📜 Terraform Format'
         id: format
