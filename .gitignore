@@ -25,3 +25,8 @@ yarn-error.log*
 
 # Vercel
 .vercel
+
+# Terraform
+.terraform
+*.tfstate*
+*.hcl
