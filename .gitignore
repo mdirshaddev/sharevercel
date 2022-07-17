@@ -16,5 +16,12 @@ build
 .env.test.local
 .env.production.local
 
+# yarn logs
 yarn-debug.log*
 yarn-error.log*
+
+# logs
+*.log*
+
+# Vercel
+.vercel
