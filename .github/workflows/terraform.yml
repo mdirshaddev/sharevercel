@@ -34,7 +34,7 @@ jobs:
       - name: '📜 Terraform Format'
         id: format
         run: |
-          terraform fmt -check
+          terraform fmt
       - name: '🧑‍🚀 Terraform initialize'
         id: init
         run: |
