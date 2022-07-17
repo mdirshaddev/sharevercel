@@ -18,5 +18,8 @@
   // Workbench
   "workbench.colorTheme": "Abyss",
   "workbench.editor.enablePreview": true,
-  "workbench.editor.wrapTabs": true
+  "workbench.editor.wrapTabs": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  }
 }
