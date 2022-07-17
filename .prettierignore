@@ -20,3 +20,8 @@ yarn-error.log*
 
 # logs
 *.logs
+
+# Terraform
+*.tfstate*
+.terraform
+*.hcl
