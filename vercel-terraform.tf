@@ -43,6 +43,11 @@ variable "REACT_APP_MEASUREMENT_ID" {
   description = "Firebase Google Analytics Measurement ID"
 }
 
+variable "VERCEL_API_TOKEN" {
+  type = string
+  description = "Full Access Vercel Token"
+}
+
 terraform {
   required_providers {
     vercel = {
@@ -53,7 +58,7 @@ terraform {
 }
 
 provider "vercel" {
-  api_token = var.vercel_api_token
+  api_token = var.VERCEL_API_TOKEN
 }
 
 resource "vercel_project" "sharemem" {
