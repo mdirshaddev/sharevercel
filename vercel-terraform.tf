@@ -58,48 +58,48 @@ resource "vercel_project" "sharemem" {
   environment = [
     {
       key    = "REACT_APP_SENTRY_DSN"
-      value  = var.react_app_sentry_dsn
+      value  = var.REACT_APP_SENTRY_DSN
       target = ["production", "preview", "development"]
     },
 
     {
       key    = "REACT_APP_API_KEY"
-      value  = var.react_app_api_key
+      value  = var.REACT_APP_API_KEY
       target = ["production", "preview", "development"]
     },
     {
       key    = "REACT_APP_AUTH_DOMAIN"
-      value  = var.react_app_auth_domain
+      value  = var.REACT_APP_AUTH_DOMAIN
       target = ["production", "preview", "development"]
     },
     {
       key    = "REACT_APP_DATABASE_URL"
-      value  = var.react_app_database_url
+      value  = var.REACT_APP_DATABASE_URL
       target = ["production", "preview", "development"]
     },
     {
       key    = "REACT_APP_PROJECT_ID"
-      value  = var.react_app_project_id
+      value  = var.REACT_APP_PROJECT_ID
       target = ["production", "preview", "development"]
     },
     {
       key    = "REACT_APP_STORAGE_BUCKET"
-      value  = var.react_app_storage_bucket
+      value  = var.REACT_APP_STORAGE_BUCKET
       target = ["production", "preview", "development"]
     },
     {
       key    = "REACT_APP_MESSAGING_SENDER_ID"
-      value  = var.react_app_messaging_sender_id
+      value  = var.REACT_APP_MESSAGING_SENDER_ID
       target = ["production", "preview", "development"]
     },
     {
       key : "REACT_APP_APP_ID",
-      value : var.react_app_app_id
+      value : var.REACT_APP_APP_ID
       target = ["production", "preview", "development"]
     },
     {
       key = "REACT_APP_MEASUREMENT_ID",
-      value : var.react_app_measurement_id
+      value : var.REACT_APP_MEASUREMENT_ID
       target = ["production", "preview", "development"]
     }
   ]
