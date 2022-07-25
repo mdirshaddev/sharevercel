@@ -55,6 +55,7 @@
     "typescript": "4.7.4"
   },
   "resolutions": {
-    "react-scripts/**/svgo/css-select/nth-check": "^2.0.1"
+    "react-scripts/**/svgo/css-select/nth-check": "^2.0.1",
+    "react-scripts/**/terser": "^5.14.2"
   }
 }
