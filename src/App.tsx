@@ -14,7 +14,7 @@ function App() {
           href='https://reactjs.org'
           target='_blank'
           rel='noopener noreferrer'>
-          Sharemem Photo Sharing Application
+          Sharemem Photo Sharing Web Application
         </a>
       </header>
     </div>
