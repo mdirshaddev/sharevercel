@@ -44,7 +44,7 @@ variable "REACT_APP_MEASUREMENT_ID" {
 }
 
 variable "VERCEL_API_TOKEN" {
-  type = string
+  type        = string
   description = "Full Access Vercel Token"
 }
 
@@ -62,8 +62,9 @@ provider "vercel" {
 }
 
 resource "vercel_project" "sharemem" {
-  name      = "sharemem"
-  framework = "nextjs"
+  name                       = "sharemem"
+  framework                  = "create-react-app"
+  serverless_function_region = "bom1"
   environment = [
     {
       key    = "REACT_APP_SENTRY_DSN"
