@@ -1,5 +1,5 @@
 # Create Vercel Deployment
-name: 'Vercel'
+name: 'Vercel CRA Deployment'
 
 on:
   pull_request:
@@ -16,7 +16,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: 'Vercel Deployment'
+      - name: 'Vercel Development Deployment'
         if: github.event_name == 'pull_request'
         uses: amondnet/vercel-action@v20
         with:
@@ -25,7 +25,7 @@ jobs:
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}}
 
-      - name: 'Vercel Production'
+      - name: 'Vercel Production Deployment'
         if: github.event_name == 'release' && github.event_name.action == 'published'
         uses: amondnet/vercel-action@v20
         with:
