@@ -62,8 +62,9 @@ provider "vercel" {
 }
 
 resource "vercel_project" "sharemem" {
-  name      = "sharemem"
-  framework = "create-react-app"
+  name                       = "sharemem"
+  framework                  = "create-react-app"
+  serverless_function_region = "bom1"
   environment = [
     {
       key    = "REACT_APP_SENTRY_DSN"
