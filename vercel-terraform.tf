@@ -49,6 +49,13 @@ variable "VERCEL_API_TOKEN" {
 }
 
 terraform {
+  cloud {
+    organization = "mdirshaddev"
+
+    workspaces {
+      name = "sharemem"
+    }
+  }
   required_providers {
     vercel = {
       source  = "vercel/vercel"
