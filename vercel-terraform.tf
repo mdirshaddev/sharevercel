@@ -62,6 +62,7 @@ provider "vercel" {
 }
 
 resource "vercel_project" "sharemem" {
+  id                         = "vercel_firebase_react_app"
   name                       = "sharemem"
   framework                  = "create-react-app"
   serverless_function_region = "bom1"
