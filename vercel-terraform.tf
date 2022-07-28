@@ -49,6 +49,13 @@ variable "VERCEL_API_TOKEN" {
 }
 
 terraform {
+  cloud {
+    organization = "mdirshaddev"
+
+    workspaces {
+      name = "sharemem"
+    }
+  }
   required_providers {
     vercel = {
       source  = "vercel/vercel"
@@ -62,6 +69,7 @@ provider "vercel" {
 }
 
 resource "vercel_project" "sharemem" {
+  id                         = "vercel_firebase_react_app"
   name                       = "sharemem"
   framework                  = "create-react-app"
   serverless_function_region = "bom1"
