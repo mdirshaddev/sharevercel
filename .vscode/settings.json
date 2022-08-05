@@ -16,7 +16,7 @@
   "editor.formatOnSaveMode": "file",
   "editor.formatOnType": true,
   // Workbench
-  "workbench.colorTheme": "Abyss",
+  "workbench.colorTheme": "GitHub Dark Default",
   "workbench.editor.enablePreview": true,
   "workbench.editor.wrapTabs": true,
   "[typescript]": {
