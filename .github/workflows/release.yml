@@ -2,9 +2,10 @@
 name: Release
 
 on:
-  push:
-    tags:
-      - 'v*'
+  workflow_run:
+    workflows: ['Tag']
+    types:
+      - 'completed'
 
 jobs:
   release:
