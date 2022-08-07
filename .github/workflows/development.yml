@@ -1,0 +1,23 @@
+name: Vercel Preview Deployment
+
+on:
+  push:
+    branches:
+      - 'development'
+
+jobs:
+  preview:
+    name: '🚀 Preview Deployment'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: '☁️ Checkout Repository'
+        uses: actions/checkout@v3
+
+      - name: '🧑‍🚀 Vercel Preview Deployment'
+        uses: amondnet/vercel-action@v25.1.0
+        with:
+          vercel-token: ${{ secrets.VERCEL_API_TOKEN }} # Required
+          github-token: ${{ secrets.GITHUB_TOKEN }} #Optional
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID}} #Required
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}} #Required
