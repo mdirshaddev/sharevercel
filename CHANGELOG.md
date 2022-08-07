@@ -1,5 +1,28 @@
 # Changelog
 
+## v0.0.1 - 2022-08-07
+
+### What's Changed
+
+- patch: 🏷️ v0.0.1 Update for documentation and Workflows by @mdirshaddev in https://github.com/mdirshaddev/sharemem/pull/11
+- docs: 📜 Documentation updated with Github badges by @mdirshaddev
+- actions: 🗑️U No need to terraform actions by @mdirshaddev
+
+Was not required at all i was using implicit triggering with Github and terraform cloud VCS Integrations
+
+- actions: 📝 Some readability improvements by @mdirshaddev
+
+Now All are under same way of Writing standards of yaml file
+
+- actions: 🧑‍🚀 Vercel Preview Deployment actions by @mdirshaddev
+
+Much need workflow
+
+- docs: 🏷️ Some more badges are added with change of workflows name by @mdirshaddev
+- patch: 🏷️ v0.0.1 Update for documentation and Workflows by @mdirshaddev
+
+**Full Changelog**: https://github.com/mdirshaddev/sharemem/compare/v0.0.0...v0.0.1
+
 ## v0.0.0 - 2022-08-07
 
 ### What's Changed
