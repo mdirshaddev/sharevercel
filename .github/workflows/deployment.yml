@@ -1,4 +1,4 @@
-name: Vercel Deployment
+name: Vercel Production Deployment
 
 on:
   release:
@@ -7,17 +7,17 @@ on:
 
 jobs:
   deploy:
-    name: Deploy
+    name: '🧑‍🚀 Deploy'
     runs-on: ubuntu-latest
     concurrency:
       group: ${{ github.workflow }}
       cancel-in-progress: true
 
     steps:
-      - name: Checkout Code
+      - name: '☁️ Checkout Repository'
         uses: actions/checkout@v3
 
-      - name: Vercel Deployment
+      - name: '🧑‍🚀 Vercel Production Deployment'
         uses: amondnet/vercel-action@v25.1.0
         with:
           vercel-token: ${{ secrets.VERCEL_API_TOKEN }} # Required

@@ -1,8 +1,9 @@
-name: Update Changelog
+name: Automated Update Changelog
 
 on:
   release:
-    types: [released]
+    types:
+      - 'released'
 
 jobs:
   update:
@@ -10,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: '☁️ Checkout Repository'
         uses: actions/checkout@v3
         with:
           # Fetch entire history of repository to ensure relase date can be
@@ -20,12 +21,12 @@ jobs:
           # is not out of date.
           ref: ${{ github.event.release.target_commitish }}
 
-      - name: Extract release date from git tag
+      - name: '🗓️ Extract release date from git tag'
         id: release_date
         run: |
           echo "::set-output name=date::$(git log -1 --date=short --format=%ad '${{ github.event.release.tag_name }}')"
 
-      - name: Update Changelog
+      - name: '📝 Update Changelog'
         uses: stefanzweifel/changelog-updater-action@v1
         with:
           # Pass extracted release date, release notes and version to the Action.
@@ -34,7 +35,7 @@ jobs:
           latest-version: ${{ github.event.release.tag_name }}
           compare-url-target-revision: ${{ github.event.release.target_commitish }}
 
-      - name: Commit updated CHANGELOG
+      - name: '📝 Commit updated CHANGELOG'
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           # Push updated CHANGELOG to release target branch.
