@@ -1,4 +1,4 @@
-name: Tag
+name: Automated Create Tag
 
 on:
   push:
@@ -7,18 +7,18 @@ on:
 
 jobs:
   create-tag:
-    name: Tag
+    name: '🏷️ Create Tag'
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: '☁️ Checkout Repository'
         uses: actions/checkout@v3
 
-      - name: Set Tag Output
+      - name: '🏷️ Set Tag Output'
         id: set-tag
         run: echo "::set-output name=tag_name::v$(Scripts/get-version.sh)"
 
-      - name: Create Tag
+      - name: '🏷️ Create Tag'
         uses: actions/github-script@v3
         env:
           TAG: ${{ steps.set-tag.outputs.tag_name }}
